@@ -1,5 +1,5 @@
 base_url = "https://prashantrahul.com"
-title = "Prashant Rahul"
+title = "~/prashant"
 description = "I am a software developer working in a lot of fields with a specialization in building and tinkering compilers and interpreters. I also work on creating full-stack web experiences, emulators, graphics APIs, games and cross platform applications."
 build_search_index = false
 generate_feeds = true
@@ -33,7 +33,6 @@ repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/
 menu = [
     { name = "~/prashant", url = "/", weight = 0},
     { name = "~/posts", url = "/posts", weight = 1 },
-    { name = "~/projects", url = "/projects", weight = 2 },
 ]
 
 show_social_on_nav = false

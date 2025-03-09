@@ -13,7 +13,14 @@
       devShells."x86_64-linux".default = pkgs.mkShell {
         packages = with pkgs; [
           zola
+          yq
         ];
+
+        shellHook = ''
+          set -a
+          source .env
+          set +a
+          '';
       };
     };
 }

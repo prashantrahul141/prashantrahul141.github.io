@@ -11,5 +11,8 @@ i write sometimes [here](/posts).
 
 you can find my nix dotfiles <a target="_blank" href="https://github.com/prashantrahul141/dotfiles">here</a>.
 
+## Projects
+{{ home_projects() }}
+
 ## Links
 {{ home_socials() }}

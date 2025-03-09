@@ -1,5 +1,3 @@
-{% set config = load_data(path="config.toml") -%}
-
 {% for social in config.extra.socials %}
 <div>
   <a href="{{ social.url }}" target="_blank">{{ social.name }}</a>
