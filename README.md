@@ -15,7 +15,7 @@ otherwise install the following requirements manually:
 
 create a `.env` file in root directory with the following content:
 ```.env
-GITHUB_TOKEN=github_token
+GRAPHQL_GITHUB_TOKEN=github_token
 ```
 
 then run

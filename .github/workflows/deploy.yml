@@ -11,18 +11,26 @@ on:
   workflow_dispatch:
 
 name: Build and deploy GH Pages
+env:
+  GRAPHQL_GITHUB_TOKEN : ${{ secrets.GRAPHQL_GITHUB_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: prebuild phase
-        run: make repos.toml
+      - name: Install Nix
+        uses: cachix/install-nix-action@v17
+        with:
+            github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: build_and_deploy
+      - name: Prebuild phase
+        run: nix develop --command make repos.toml
+
+      - name: Build and Deploy
         uses: shalzz/zola-deploy-action@master
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
