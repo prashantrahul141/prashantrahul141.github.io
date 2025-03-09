@@ -1,5 +1,5 @@
 base_url = "https://prashantrahul.com"
-title = "/prashant"
+title = "Prashant Rahul"
 description = "I am a software developer working in a lot of fields with a specialization in building and tinkering compilers and interpreters. I also work on creating full-stack web experiences, emulators, graphics APIs, games and cross platform applications."
 build_search_index = false
 generate_feeds = true
@@ -21,8 +21,9 @@ highlight_theme = "ayu-light"
 [extra]
 toc = true
 use_cdn = false
-favicon = "/icon/favicon.png"
-theme = "toggle"              # light, dark, auto, toggle
+favicon = "/icons/favicon.ico"
+logo = "/icons/logo.png"
+theme = "dark"              # light, dark, auto, toggle
 fancy_code = true
 dynamic_note = true           # a note that can be toggled
 mathjax = true
@@ -30,13 +31,17 @@ mathjax_dollar_inline_enable = true
 repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io"
 
 menu = [
+    { name = "/home", url = "/", weight = 0},
     { name = "/posts", url = "/posts", weight = 1 },
     { name = "/projects", url = "/projects", weight = 2 },
 ]
 
+show_social_on_nav = false
 socials = [
-    { name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter" },
+    { name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email"},
     { name = "github", url = "https://github.com/prashantrahul141/", icon = "github" },
+    { name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter" },
+    { name = "linkedin" , url = "https://www.linkedin.com/in/prashantrahul141/", icon = "linkedin"}
 ]
 
 stylesheets = [
