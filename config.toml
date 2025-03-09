@@ -22,19 +22,18 @@ highlight_theme = "ayu-light"
 dynamic_note = true
 fancy_code = true
 favicon = "/icons/favicon.ico"
-logo = "/icons/logo.png"
+logo = "/icons/logo.avif"
 mathjax = true
 mathjax_dollar_inline_enable = true
 repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/"
-resume = "/Prashant-Rahul-CV.pdf"
 theme = "auto" # light, dark, auto, toggle
 toc = true
 use_cdn = false
 
 menu = [
-  {name = "~/prashant", url = "/", weight = 0},
   {name = "~/posts", url = "/posts", weight = 1},
   {name = "~/gallery", url = "/gallery", weight = 2},
+  { name = "~/resume", url = "/Prashant-Rahul-CV.pdf", weight = 3}
 ]
 
 show_social_on_nav = false

@@ -2,7 +2,7 @@
     <div class="main">
         {% if config.extra.logo %}
             <a href={{ config.base_url }} class="logo">
-            <img alt="{{ config.title }}" src="{{ get_url(path=config.extra.logo) }}">
+            <img width="640" height="640" alt="{{ config.title }}" src="{{ get_url(path=config.extra.logo) }}">
             </a>
         {% else %}
             <a href={{ config.base_url }}>{{ config.title }}</a>
@@ -25,10 +25,6 @@
         {% for menu in config.extra.menu %}
             <a href={{ get_url(path=menu.url) }} style="margin-left: 1.3em">{{ menu.name }}</a>
         {% endfor %}
-
-        {% if config.extra.resume %}
-            <a target="_blank" href={{ config.extra.resume }} style="margin-left: 1.3em">~/resume</a>
-        {% endif %}
 
         {% if config.build_search_index %}
         <button
