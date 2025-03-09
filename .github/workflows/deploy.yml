@@ -1,0 +1,24 @@
+on:
+  # on push to main
+  push:
+    branches: ['main']
+
+  # every monday
+  schedule:
+    - cron: '0 1 * * 1'
+
+  # manual
+  workflow_dispatch:
+
+name: Build and deploy GH Pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: build_and_deploy
+        uses: shalzz/zola-deploy-action@master
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
