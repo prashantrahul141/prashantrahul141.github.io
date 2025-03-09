@@ -26,6 +26,10 @@
             <a href={{ get_url(path=menu.url) }} style="margin-left: 1.3em">{{ menu.name }}</a>
         {% endfor %}
 
+        {% if config.extra.resume %}
+            <a target="_blank" href={{ config.extra.resume }} style="margin-left: 1.3em">~/resume</a>
+        {% endif %}
+
         {% if config.build_search_index %}
         <button
             id="search-button"

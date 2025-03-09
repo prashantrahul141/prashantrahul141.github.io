@@ -19,16 +19,17 @@ highlight_code = true
 highlight_theme = "ayu-light"
 
 [extra]
-dynamic_note = true # a note that can be toggled
-fancy_code = true 
-favicon = "/icons/favicon.ico" 
-logo = "/icons/logo.png" 
-mathjax = true 
-mathjax_dollar_inline_enable = true 
-repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/" 
+dynamic_note = true
+fancy_code = true
+favicon = "/icons/favicon.ico"
+logo = "/icons/logo.png"
+mathjax = true
+mathjax_dollar_inline_enable = true
+repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/"
+resume = "/Prashant-Rahul-CV.pdf"
 theme = "dark" # light, dark, auto, toggle
-toc = true 
-use_cdn = false 
+toc = true
+use_cdn = false
 
 menu = [
   {name = "~/prashant", url = "/", weight = 0},
