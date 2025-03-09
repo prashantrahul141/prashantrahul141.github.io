@@ -23,6 +23,7 @@ dynamic_note = true
 fancy_code = true
 favicon = "/icons/favicon.ico"
 logo = "/icons/logo.avif"
+remote_logo_image = "https://raw.githubusercontent.com/prashantrahul141/prashantrahul141.github.io/refs/heads/main/static/icons/logo.avif"
 mathjax = true
 mathjax_dollar_inline_enable = true
 repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/"
@@ -38,8 +39,9 @@ menu = [
 
 show_social_on_nav = false
 socials = [
-  {name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email"},
   {name = "github", url = "https://github.com/prashantrahul141/", icon = "github"},
+  {name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email"},
+  {name = "dotfiles", url = "https://www.github.com/prashantrahul141/dotfiles"},
   {name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter"},
   {name = "linkedin", url = "https://www.linkedin.com/in/prashantrahul141/", icon = "linkedin"},
 ]

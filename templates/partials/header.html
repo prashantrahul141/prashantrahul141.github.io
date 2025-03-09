@@ -58,10 +58,15 @@
          {% endif %}
      {% endif %}
 
+     {% if not page_has_og_image %}
+        <meta property="og:image" content="{{ config.extra.remote_logo_image }}" />
+     {% endif %}
+
      {% if not page_has_description %}
          {% if page.description %}
              <meta name="description" content="{{ page.description }}" />
          {% elif config.description %}
+
              <meta name="description" content="{{ config.description }}" />
          {% endif %}
     {% endif %}
@@ -79,26 +84,6 @@
         <link href={{ get_url(path="fonts.css") }} rel="stylesheet" />
     {% endif %}
 
-    {# Analytics #}
-    {% if config.extra.analytics.enabled %}
-        {% if config.extra.analytics.umami.website_id %}
-            {% set website_id = config.extra.analytics.umami.website_id %}
-            {% set host_url = config.extra.analytics.umami.host_url | default(value="https://api-gateway.umami.dev/") %}
-
-            <script defer src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
-        {% endif %}
-
-        {% if config.extra.analytics.goatcounter.user %}
-            {% set user = config.extra.analytics.goatcounter.user %}
-            {% set host = config.extra.analytics.goatcounter.host | default(value="goatcounter.com") %}
-
-            <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="{{ get_url(path="js/count.js") }}"></script>
-            <noscript>
-                {# EasyList blocks '.com/count?', so we have to use '.com//count' #}
-                <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page.title | default(value=config.title) }}">
-            </noscript>
-        {% endif %}
-    {% endif %}
 
     {# Fancy Codeblock #}
     {% if config.extra.fancy_code %}
@@ -115,17 +100,6 @@
         <script src={{ get_url(path="js/note.js") }}></script>
     {% endif %}
 
-    {% if config.extra.mathjax | default(value=false) %}
-        {% if config.extra.mathjax_dollar_inline_enable | default(value=false) %}
-            <script>
-            MathJax = {
-              tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-              }
-            };
-            </script>
-        {% endif %}
-    {% endif %}
 
     {# RSS #}
     <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
@@ -170,25 +144,4 @@
             <link rel="stylesheet" href="{{ get_url(path=stylesheet) }}">
         {% endfor %}
     {% endif %}
-
-
-    {# Search #}
-    {%- if config.build_search_index -%}
-        {%- if config.search.index_format -%}
-            {%- set search_index_format = config.search.index_format -%}
-        {%- elif config.extra.index_format -%}
-            {# Necessary to support Zola 0.17.X, as it doesn't have access to config.search.index_format #}
-            {# See: https://github.com/getzola/zola/issues/2165 #}
-            {%- set search_index_format = config.extra.index_format -%}
-        {%- else -%}
-            {%- set search_index_format = "elasticlunr_json" -%}
-        {%- endif -%}
-
-        {%- if search_index_format == "elasticlunr_javascript" -%}
-            <script defer src="{{ get_url(path='search_index.' ~ lang ~ '.js', cachebust=true) | safe }}"></script>
-        {%- endif -%}
-
-        {# Main search script #}
-        <script defer src="{{ get_url(path='js/searchElasticlunr.min.js', cachebust=true) | safe }}"></script>
-    {%- endif -%}
 </head>
