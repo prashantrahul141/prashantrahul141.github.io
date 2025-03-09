@@ -18,6 +18,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+
+      - name: prebuild phase
+        run: make repos.toml
+
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@master
         env:
