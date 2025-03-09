@@ -2,17 +2,12 @@
 
 <!DOCTYPE html>
 <html lang="en" class="dark light">
+  {% include "partials/header.html" %}
 
-{% include "partials/header.html" %}
-
-<body>
-    <div class="content">
-        {% include "partials/nav.html" %}
-        {# Post page is the default #}
-        {% block main_content %}
-            Nothing here?!
-        {% endblock main_content %}
+  <body>
+    <div class="content" style="margin-bottom: 6rem">
+      {% include "partials/nav.html" %} {# Post page is the default #} {% block
+      main_content %} Nothing here?! {% endblock main_content %}
     </div>
-</body>
-
+  </body>
 </html>

@@ -1,17 +1,17 @@
 base_url = "https://prashantrahul.com"
-title = "~/prashant"
-description = "I am a software developer working in a lot of fields with a specialization in building and tinkering compilers and interpreters. I also work on creating full-stack web experiences, emulators, graphics APIs, games and cross platform applications."
 build_search_index = false
-generate_feeds = true
 compile_sass = true
+description = "I am a software developer working in a lot of fields with a specialization in building and tinkering compilers and interpreters. I also work on creating full-stack web experiences, emulators, graphics APIs, games and cross platform applications."
+generate_feeds = true
 minify_html = true
-taxonomies = [{ name = "tags" }]
+taxonomies = [{name = "tags"}]
+title = "~/prashant"
 
 [search]
-include_title = true
+include_content = true
 include_description = true
 include_path = true
-include_content = true
+include_title = true
 index_format = "elasticlunr_json"
 
 [markdown]
@@ -19,32 +19,33 @@ highlight_code = true
 highlight_theme = "ayu-light"
 
 [extra]
-toc = true
-use_cdn = false
-favicon = "/icons/favicon.ico"
-logo = "/icons/logo.png"
-theme = "dark"              # light, dark, auto, toggle
-fancy_code = true
-dynamic_note = true           # a note that can be toggled
-mathjax = true
-mathjax_dollar_inline_enable = true
-repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/"
+dynamic_note = true # a note that can be toggled
+fancy_code = true 
+favicon = "/icons/favicon.ico" 
+logo = "/icons/logo.png" 
+mathjax = true 
+mathjax_dollar_inline_enable = true 
+repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/" 
+theme = "dark" # light, dark, auto, toggle
+toc = true 
+use_cdn = false 
 
 menu = [
-    { name = "~/prashant", url = "/", weight = 0},
-    { name = "~/posts", url = "/posts", weight = 1 },
+  {name = "~/prashant", url = "/", weight = 0},
+  {name = "~/posts", url = "/posts", weight = 1},
+  {name = "~/gallery", url = "/gallery", weight = 2},
 ]
 
 show_social_on_nav = false
 socials = [
-    { name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email"},
-    { name = "github", url = "https://github.com/prashantrahul141/", icon = "github" },
-    { name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter" },
-    { name = "linkedin" , url = "https://www.linkedin.com/in/prashantrahul141/", icon = "linkedin"}
+  {name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email"},
+  {name = "github", url = "https://github.com/prashantrahul141/", icon = "github"},
+  {name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter"},
+  {name = "linkedin", url = "https://www.linkedin.com/in/prashantrahul141/", icon = "linkedin"},
 ]
 
 stylesheets = [
-    #"custom.css"    # at /static/custom.css
+  #"custom.css"    # at /static/custom.css
 ]
 
 [extra.analytics]

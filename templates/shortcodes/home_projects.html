@@ -18,17 +18,17 @@
           font-size: 1.2rem;
           flex-grow: 1;
           line-height: 0.2px;
+          letter-spacing: 0.06rem;
           margin-bottom: 0px;
         "
       >
         <a target="_blank" href="{{ repo.url }}"> {{ repo.name }} </a>
       </p>
 
-      <p></p>
-      <p style="font-size: 0.8rem">{{ repo.primaryLanguage.name }}</p>
+      <p style="font-size: 0.84rem">{{ repo.primaryLanguage.name }}</p>
       <p
         style="
-          font-size: 0.8rem;
+          font-size: 0.84rem;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -49,7 +49,9 @@
         <span> {{ repo.stargazerCount }} </span>
       </p>
     </div>
-    <p style="opacity: 80%; font-size: 0.9rem">{{ repo.description }}</p>
+    <p style="opacity: 80%; font-size: 0.9rem; letter-spacing: 0.04rem">
+      {{ repo.description }}
+    </p>
   </article>
 
   {% endfor %}
