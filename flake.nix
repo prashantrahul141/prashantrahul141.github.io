@@ -14,6 +14,7 @@
         packages = with pkgs; [
           zola
           yq
+          gnumake
         ];
 
         shellHook = ''
