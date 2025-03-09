@@ -1,6 +1,9 @@
-build:
-	bash ./build-gh-repos.sh
+build: repos.toml
 	zola build
 
-serve:
+serve: repos.toml
 	zola serve
+
+
+repos.toml:
+	bash ./build-gh-repos.sh

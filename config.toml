@@ -27,7 +27,7 @@ mathjax = true
 mathjax_dollar_inline_enable = true
 repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/"
 resume = "/Prashant-Rahul-CV.pdf"
-theme = "dark" # light, dark, auto, toggle
+theme = "auto" # light, dark, auto, toggle
 toc = true
 use_cdn = false
 
