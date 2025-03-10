@@ -1,3 +1,4 @@
 .env
 public/
 repos.toml
+gallery-images.toml

@@ -1,0 +1,9 @@
+{% set data = load_data(path="gallery-images.toml") %}
+
+<main class="gallery">
+    {% for img in data.gallery.images %}
+        <div class="gallery-item">
+            <img class="gallery-img" src="/gallery-images/{{ img }}" />
+        </div>
+    {% endfor %}
+</main>

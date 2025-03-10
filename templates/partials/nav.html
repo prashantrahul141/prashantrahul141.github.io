@@ -23,7 +23,11 @@
 
     <nav>
         {% for menu in config.extra.menu %}
+            {% if menu.name == "~/resume" %}
+            <a href={{ get_url(path=menu.url) }} target="_blank" style="margin-left: 1.3em">{{ menu.name }}</a>
+            {% else %}
             <a href={{ get_url(path=menu.url) }} style="margin-left: 1.3em">{{ menu.name }}</a>
+            {% endif %}
         {% endfor %}
 
         {% if config.build_search_index %}
