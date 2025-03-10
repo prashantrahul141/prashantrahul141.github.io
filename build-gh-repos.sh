@@ -12,6 +12,6 @@ curl -s -X POST -H "Authorization: Bearer $GRAPHQL_GITHUB_TOKEN" \
 
 echo "Done fetching..."
 
-print "\n"
+printf "\n"
 cat repos.toml
 printf "\n\n"

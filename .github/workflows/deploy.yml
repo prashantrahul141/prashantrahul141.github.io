@@ -28,7 +28,7 @@ jobs:
             github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prebuild phase
-        run: nix develop --command make repos.toml
+        run: nix develop --command make ci
 
       - name: Build and Deploy
         uses: shalzz/zola-deploy-action@master

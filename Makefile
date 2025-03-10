@@ -4,6 +4,8 @@ build: repos.toml gallery-images.toml
 serve: repos.toml gallery-images.toml
 	zola serve
 
+ci: repos.toml gallery-images.toml
+
 repos.toml:
 	bash ./build-gh-repos.sh
 
