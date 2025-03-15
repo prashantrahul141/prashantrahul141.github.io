@@ -7,19 +7,37 @@
   outputs =
     { self, nixpkgs }:
     let
-      pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      pkgs = import nixpkgs { system = "x86_64-linux"; };
+      tex = (
+        pkgs.texlive.combine {
+          inherit (pkgs.texlive)
+            scheme-medium
+            titlesec
+            xcolor
+            hyperref
+            enumitem
+            tex-gyre
+            microtype
+            ;
+        }
+      );
     in
     {
-      devShells."x86_64-linux".default = pkgs.mkShell {
+      devShells.x86_64-linux.default = pkgs.mkShell {
         packages = with pkgs; [
-          zola
-          yq
-          gnumake
+          zola # static site builder
+
+          yq # for toml, json conversion
+          jq
+
+          tex
+
+          gnumake # eh
         ];
 
         shellHook = ''
           set -a
-          source .env
+          [ -f .env ] && source .env
           set +a
           echo "Run make serve or make build"
         '';
