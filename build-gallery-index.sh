@@ -13,9 +13,13 @@ if [ ! -d "$directory" ]; then
 fi
 
 printf "[gallery]\nimages = [\n" >> "$output_file"
-for file in "$directory"/*; do
-    if [ -f "$file" ]; then
-        echo "    \"$(basename "$file")\"," >> "$output_file"
+for file_path in "$directory"/*; do
+    if [ -f "$file_path" ]; then
+        filename=$(basename "$file_path")
+        IFS='-' read -ra file_properties <<< "$(basename "$file_path")"
+        alt_text=$(echo "${file_properties[1]}" | tr "_" " " | sed 's/\.[^.]*$//')
+        item="{ filename = \"$filename\", alt = \"$alt_text\" },"
+        echo "    $item" >> "$output_file"
     fi
 done
 printf "]\n" >> "$output_file"
