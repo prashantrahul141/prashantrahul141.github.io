@@ -2,3 +2,7 @@
 public/
 repos.toml
 gallery-images.toml
+*.log
+*.aux
+*.out
+output.tex
