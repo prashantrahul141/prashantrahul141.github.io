@@ -9,9 +9,7 @@ If you're on nix run
 nix develop
 ```
 
-otherwise install the following requirements manually:
-- [Zola](https://github.com/getzola/zola)
-- [gnumake](https://www.gnu.org/software/make/)
+otherwise, idk look in [this file](https://github.com/prashantrahul141/prashantrahul141.github.io/blob/main/flake.nix#L27) and figure out the depencies for your distro and/or os.
 
 create a `.env` file in root directory with the following content:
 ```.env
