@@ -1,6 +1,6 @@
 +++
 title = "Making a Brainfuck compiler in Rust"
-date = "2024-02-24"
+date = 2024-02-24
 word_count = false
 
 [extra]
@@ -102,7 +102,7 @@ its like a loop and if statement combined.
 
 and thats basically it, that's all you need to make a turing complete programming language. I present to you "Hello World!" program in brainfuck.
 
-```bf
+```
 >+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.[-]
 >++++++++[<++++>-] <.>+++++++++++[<++++++++>-]<-.--------.+++
 .------.--------.[-]>++++++++[<++++>- ]<+.[-]++++++++++.
@@ -669,7 +669,7 @@ and with that our whole intepreter is ready. so lets test it.
 
 here's the hello world program from earlier,
 
-```bf
+```
 >+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.[-]
 >++++++++[<++++>-] <.>+++++++++++[<++++++++>-]<-.--------.+++
 .------.--------.[-]>++++++++[<++++>- ]<+.[-]++++++++++.
