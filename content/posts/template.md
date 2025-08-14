@@ -1,6 +1,6 @@
 +++
 title = "draft"
-date = "2024-02-24"
+date = 2024-02-24
 word_count = false
 draft = true # REMOVE THIS.
 
