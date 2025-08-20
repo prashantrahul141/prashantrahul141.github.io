@@ -6,7 +6,7 @@ serve: ./static/Prashant-Rahul-CV.pdf repos.toml gallery-images.toml
 
 ci: ./static/Prashant-Rahul-CV.pdf repos.toml gallery-images.toml
 
-./static/Prashant-Rahul-CV.pdf: ./static/resume/pre-proj.tex ./static/resume/post-proj.tex
+./static/Prashant-Rahul-CV.pdf: ./static/resume/pre-proj.tex ./static/resume/post-proj.tex ./build-resume.sh
 	bash ./build-resume.sh
 
 repos.toml:
