@@ -15,12 +15,12 @@ RESPONSE=$(curl -s -X POST -H "Authorization: Bearer $GRAPHQL_GITHUB_TOKEN" \
 test -f "$PRE_PROJ_FILE" && cat "$PRE_PROJ_FILE" > "$OUTPUT_FILE"
 
 echo "$RESPONSE" | jq -r '
-  .data.user.pinnedItems.edges[] | .node |
-  "\\noindent\\textbf{" + .name + "} \\textit{\\footnotesize (" +
-  ( [(.repositoryTopics.edges[].node.topic.name)] | join(", ") ) +
-  ") } \\hfill \\texttt{\\href{" + .url + "}{[link]}} \\\\ \n" +
-  (.description // "No description available") + " \\vspace{0.5em} \n"
-' | sed 's/C#/C\\#/g' >> "$OUTPUT_FILE"
+.data.user.pinnedItems.edges[] | .node |
+"\\noindent\\textbf{" + .name + "} \\textit{\\footnotesize (" +
+([(.repositoryTopics.edges[].node.topic.name)] | join(", ")) +
+") } \\hfill \\texttt{\\href{" + .url + "}{[link]}} \\\\ \n" +
+"\\parbox{0.88\\textwidth}{" + (.description // "No description available") + "}  \\vspace{0.8em} \n"
+' | sed 's/[#_]/\\&/g' >> "$OUTPUT_FILE"
 
 echo "\\vspace{-0.5em}" >> "$OUTPUT_FILE"
 
