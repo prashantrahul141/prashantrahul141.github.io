@@ -4,6 +4,9 @@ build: repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.pdf
 serve: repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.pdf
 	zola serve
 
+serve-fast: repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.pdf
+	zola serve --fast
+
 ci: repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.pdf
 
 ./static/Prashant-Rahul-CV.pdf: ./static/resume/pre-proj.tex ./static/resume/post-proj.tex ./build-resume.sh repos.toml
