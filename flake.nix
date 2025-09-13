@@ -36,9 +36,6 @@
         ];
 
         shellHook = ''
-          set -a
-          [ -f .env ] && source .env
-          set +a
           echo "Run make serve or make build"
         '';
       };
