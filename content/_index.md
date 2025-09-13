@@ -3,7 +3,10 @@ title= "Prashant Rahul"
 template = "homepage.html"
 +++
 
-I am an undergraduate junior interested in building and tinkering with compilers and interpreters. I also work on emulators, graphics APIs, games, cross-platform applications, and full-stack web experiences.
+i am an undergraduate junior interested in building and tinkering with low level software and compilers. I also work on emulators, graphics APIs, games and cross-platform applications.
+
+i like a lot of things, including computers, video games, [cats](./other-images/theatombrothers.avif), [dogs](./other-images/0braincells.avif), alt-pop music, philosophy, history, cooking, and more
+
 
 i sometimes post [here](https://prashantrahul.com/posts/)\
 mail me at [prashantrahul141@protonmail.com](mailto:prashantrahul141@protonmail.com)\
