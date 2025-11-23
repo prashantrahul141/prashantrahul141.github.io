@@ -10,13 +10,13 @@ serve-fast: repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.pdf
 ci: repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.pdf
 
 ./static/Prashant-Rahul-CV.pdf: ./static/resume/pre-proj.tex ./static/resume/post-proj.tex ./build-resume.sh repos.toml
-	bash ./build-resume.sh
+	./build_resume.py
 
 repos.toml:
-	bash ./build-gh-repos.sh
+	./build_gh_repos.py
 
 gallery-images.toml:
-	bash ./build-gallery-index.sh
+	./build_gallery_index.py
 
 clean:
 	rm -f repos.toml gallery-images.toml ./static/Prashant-Rahul-CV.*
