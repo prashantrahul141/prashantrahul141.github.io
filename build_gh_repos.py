@@ -5,7 +5,7 @@ import sys
 import json
 import urllib.request
 import urllib.parse
-import tomlkit
+import toml
 
 
 def fetch_repos():
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
     # convert to toml
     response_body = json.loads(response_raw)
-    toml_response = tomlkit.dumps(response_body)
+    toml_response = toml.dumps(response_body)
 
     # write to file
     with open(OUTPUT_FILE, "w", encoding="utf-8") as out_file:
