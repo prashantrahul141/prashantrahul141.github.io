@@ -27,8 +27,11 @@
         packages = with pkgs; [
           zola # static site builder
 
-          yq # for toml, json conversion
-          jq
+          python313Full
+          python313Packages.toml # converting json to toml
+
+          # yq # for toml, json conversion
+          # jq
 
           tex
 
