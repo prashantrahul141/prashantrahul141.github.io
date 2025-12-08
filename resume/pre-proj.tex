@@ -1,0 +1,55 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tgheros}    % Modern sans-serif font (Helvetica-like)
+\usepackage{microtype}  % Better text justification
+\usepackage{enumitem}   % Compact lists
+
+\definecolor{linkcolor}{HTML}{1155CC}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+}
+
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\vspace{0em} \hrule \vspace{0.5em}]
+\titlespacing*{\section}{0pt}{*1.5}{*0.75}
+
+
+\begin{document}
+
+\noindent{\huge \textbf{Prashant Rahul}} \vspace{0.5em}
+
+\hrule\vspace{1em}
+
+\noindent
+\begin{tabular}{@{}l l}
+Home: & \href{https://prashantrahul.com}{\texttt{prashantrahul.com}} \\
+Email: & \href{mailto:prashantrahul141@protonmail.com}{\texttt{prashantrahul141@protonmail.com}} \\
+Github: & \href{https://github.com/prashantrahul141}{\texttt{github.com/prashantrahul141}} \\
+\end{tabular}
+
+\section*{Work Experience}
+
+\noindent\textbf{Cypherock, Gurugram} \textit{(Remote)} \hfill \textit{Aug 2024 - present}\\
+\noindent Software Engineer Intern
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Worked on firmware for the X1 and X2 hardware wallets
+\end{itemize}
+
+
+\section*{Open source contributions}
+
+\noindent\textbf{The Julia Programming Language} \hfill \href{https://github.com/JuliaLang/julia/issues?q=author%3Aprashantrahul141}{\texttt{[link]}}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Improved performance in show() for UnitRange, append! for AbstractVector
+    \item Quality of life improvement when displaying empty ranges \vspace{0.5em}
+\end{itemize}
+
+% \noindent\textbf{Create T3 App} \hfill \href{https://github.com/t3-oss/create-t3-app/pulls?q=is%3Apr+author%3Aprashantrahul141}{\texttt{[link]}}
+% \begin{itemize}[noitemsep, topsep=0pt]
+%     \item Fixed minor bugs \vspace{0.5em}
+% \end{itemize}
+
+\section*{Projects}
