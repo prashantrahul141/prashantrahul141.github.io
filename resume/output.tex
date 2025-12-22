@@ -1,0 +1,89 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tgheros}    % Modern sans-serif font (Helvetica-like)
+\usepackage{microtype}  % Better text justification
+\usepackage{enumitem}   % Compact lists
+
+\definecolor{linkcolor}{HTML}{1155CC}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+}
+
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\vspace{0em} \hrule \vspace{0.5em}]
+\titlespacing*{\section}{0pt}{*1.5}{*0.75}
+
+
+\begin{document}
+
+\noindent{\huge \textbf{Prashant Rahul}} \vspace{0.5em}
+
+\hrule\vspace{1em}
+
+\noindent
+\begin{tabular}{@{}l l}
+Home: & \href{https://prashantrahul.com}{\texttt{prashantrahul.com}} \\
+Email: & \href{mailto:prashantrahul141@protonmail.com}{\texttt{prashantrahul141@protonmail.com}} \\
+Github: & \href{https://github.com/prashantrahul141}{\texttt{github.com/prashantrahul141}} \\
+\end{tabular}
+
+\section*{Work Experience}
+
+\noindent\textbf{Cypherock, Gurugram} \textit{(Remote)} \hfill \textit{Aug 2024 - present}\\
+\noindent Software Engineer Intern
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Worked on firmware for the X1 and X2 hardware wallets
+\end{itemize}
+
+
+\section*{Open source contributions}
+
+\noindent\textbf{The Julia Programming Language} \hfill \href{https://github.com/JuliaLang/julia/issues?q=author%3Aprashantrahul141}{\texttt{[link]}}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Improved performance in show() for UnitRange, append! for AbstractVector
+    \item Quality of life improvement when displaying empty ranges \vspace{0.5em}
+\end{itemize}
+
+% \noindent\textbf{Create T3 App} \hfill \href{https://github.com/t3-oss/create-t3-app/pulls?q=is%3Apr+author%3Aprashantrahul141}{\texttt{[link]}}
+% \begin{itemize}[noitemsep, topsep=0pt]
+%     \item Fixed minor bugs \vspace{0.5em}
+% \end{itemize}
+
+\section*{Projects}
+\noindent\textbf{evelin} \textit{\footnotesize (compiler, qbe, rust) } \hfill \texttt{\href{https://github.com/prashantrahul141/evelin}{[link]}} \\ 
+\parbox{0.88\textwidth}{Evelin is a general purpose, statically typed, compiled language using the QBE backend with C FFI support.}  \vspace{0.8em} 
+
+\noindent\textbf{zspie} \textit{\footnotesize (c, compiler, interpreter) } \hfill \texttt{\href{https://github.com/prashantrahul141/zspie}{[link]}} \\ 
+\parbox{0.88\textwidth}{Zspie is a fast, easy, dynamic programming language, implemented in C with a virtual machine and opcode based execution.}  \vspace{0.8em} 
+
+\noindent\textbf{cipi8} \textit{\footnotesize (chip8, chip8-emulator, cpp) } \hfill \texttt{\href{https://github.com/prashantrahul141/cipi8}{[link]}} \\ 
+\parbox{0.88\textwidth}{C++ Chip-8 emulator with opcode, graphics, input, and timer support.}  \vspace{0.8em} 
+
+\noindent\textbf{splax} \textit{\footnotesize (interpreter, lexer, parser) } \hfill \texttt{\href{https://github.com/prashantrahul141/splax}{[link]}} \\ 
+\parbox{0.88\textwidth}{A memory-safe, easy, dynamic programming language in Rust with a tree-walk interpreter executing directly on the AST.}  \vspace{0.8em} 
+
+\noindent\textbf{dotfiles} \textit{\footnotesize (dotfiles, nix, nixos-configuration) } \hfill \texttt{\href{https://github.com/prashantrahul141/dotfiles}{[link]}} \\ 
+\parbox{0.88\textwidth}{Nix configuration using flakes and home manager for all my machines.}  \vspace{0.8em} 
+\vspace{-0.5em}\section*{Skills}
+\textbf{Programming Languages:}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Proficient:} Rust, C/C++, Go, Typescript
+    \item \textbf{Experienced:} LLVM IR, QBE IR, Julia, Python, C\# \vspace{0.5em}
+\end{itemize}
+
+\noindent\textbf{Technologies \& Tools:}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item GNU/Linux, Nix/NixOS, Git, CMake, Make, Meson, Vi/Vim/Neovim, POSIX Shells, NodeJS, SolidJS
+\end{itemize}
+
+\section*{Education}
+\noindent\textbf{Bachelor's Degree in Computer Science} \hfill \textit{Graduating in 2027}\\
+\noindent CV Raman Global University \vspace{0.5em}
+
+\noindent\textbf{Senior Secondary Education} \hfill \textit{2022}\\
+\noindent DAV Public School
+
+\end{document}
