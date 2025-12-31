@@ -6,3 +6,4 @@ gallery-images.toml
 *.aux
 *.out
 output.tex
+resume.typ

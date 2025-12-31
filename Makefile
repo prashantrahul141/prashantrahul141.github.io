@@ -12,20 +12,18 @@ serve-fast: index resume
 ci: index resume
 
 RESUME_OUTFILE = ./static/Prashant-Rahul-CV.pdf
-RESUME_INFILE = ./static/resume/pre-proj.tex ./static/resume/post-proj.tex
+RESUME_INFILE = ./static/resume-typst/01-pre-proj.typ ./static/resume-typst/02-post-proj.typ
 REPO_INDEX_FILE = repos.toml
 GALLERY_INDEX_FILE = gallery-images.toml
 
 # resume
 resume: $(RESUME_OUTFILE)
 
-$(RESUME_OUTFILE): $(RESUME_INFILE) ./build-resume.sh repos.toml
-	./build_resume.py
-
+$(RESUME_OUTFILE): $(RESUME_INFILE) repos.toml
+	./build_resume_typ.py
 
 # both index
 index: repos gallery
-
 
 # repos index
 repos: $(REPO_INDEX_FILE)
@@ -33,13 +31,11 @@ repos: $(REPO_INDEX_FILE)
 $(REPO_INDEX_FILE):
 	./build_gh_repos.py
 
-
 # gallery index
 gallery: $(GALLERY_INDEX_FILE)
 
 $(GALLERY_INDEX_FILE):
 	./build_gallery_index.py
-
 
 # cleanup
 clean: clean-repos clean-gallery-images clean-resume
