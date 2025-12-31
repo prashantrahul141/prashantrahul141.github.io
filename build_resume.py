@@ -50,6 +50,7 @@ for edge in edges:
 
 # write projs
 with open(OUT_TYPST_FILEPATH, "a", encoding="utf-8") as out_file:
+    out_file.write('#section("Projects")')
     out_file.write("#list_vspace\n".join(out))
 
     # post proj file
