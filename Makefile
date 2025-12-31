@@ -20,7 +20,7 @@ GALLERY_INDEX_FILE = gallery-images.toml
 resume: $(RESUME_OUTFILE)
 
 $(RESUME_OUTFILE): $(RESUME_INFILE) repos.toml
-	./build_resume_typ.py
+	./build_resume.py
 
 # both index
 index: repos gallery
