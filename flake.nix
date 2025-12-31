@@ -8,19 +8,6 @@
     { self, nixpkgs }:
     let
       pkgs = import nixpkgs { system = "x86_64-linux"; };
-      tex = (
-        pkgs.texlive.combine {
-          inherit (pkgs.texlive)
-            scheme-medium
-            titlesec
-            xcolor
-            hyperref
-            enumitem
-            tex-gyre
-            microtype
-            ;
-        }
-      );
     in
     {
       devShells.x86_64-linux.default = pkgs.mkShell {
@@ -30,13 +17,16 @@
           python313Full
           python313Packages.toml # converting json to toml
 
-          # yq # for toml, json conversion
-          # jq
+          # fonts
+          pkgs.lmodern
 
-          tex
+          typst
 
           gnumake # eh
         ];
+
+        # make font available for typst
+        TYPST_FONT_PATHS = "${pkgs.lmodern}/share/fonts/";
 
         shellHook = ''
           echo "Run make serve or make build"
