@@ -3,7 +3,7 @@ title= "Prashant Rahul"
 template = "homepage.html"
 +++
 
-i am an undergraduate junior interested in building and tinkering with low level software and compilers. I also work on emulators, graphics APIs, games and cross-platform applications.
+i am an undergraduate junior interested in embedded systems, compilers, and low-level software.
 
 i like a lot of things, including computers, video games, [cats](./other-images/theatombrothers.avif), [dogs](./other-images/0braincells.avif), alt-pop music, philosophy, history, cooking, and more
 
