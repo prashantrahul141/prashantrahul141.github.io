@@ -13,7 +13,7 @@ tags=["tag1"]
 
 # Links
 
-link: {{ external_link(url="https://github.com/prashantrahul141" ) }}
+external link: {{ external_link(url="https://github.com/prashantrahul141" ) }}
 
 # Heading
 

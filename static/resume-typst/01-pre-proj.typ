@@ -69,7 +69,7 @@
   "Software Engineer Intern",
   [
     #list(tight: true, indent: 10pt)[
-      Implemented Canton and Base network support on stm32 firmware
+      Implemented the Canton Network within STM32 embedded firmware for the X1 crypto hardware wallet, supporting 30K+ users
     ][
       Ocassionally worked on the Electron side of things]
   ],
