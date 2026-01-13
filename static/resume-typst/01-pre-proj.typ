@@ -13,6 +13,11 @@
   #v(0.6em)
 ]
 
+// determines whether this pdf is for printing or not.
+// need this to conditionally render some stuff (mostly just links)
+// set by the build_resume.py script
+#let for_printing = sys.inputs.for_printing == "true"
+
 // ---------- helpers ----------
 #let section(title) = [
   #heading[
@@ -23,7 +28,11 @@
 
 #let oss_entry(name, url, body) = [
   #text(weight: "bold")[#name] #h(1fr)
-  #link(url)[[link]]
+  #if for_printing [
+    \
+  ] else [
+    #link(url)[[link]] \
+  ]
   #body
 ]
 
@@ -34,9 +43,14 @@
   #body
 ]
 
+
 #let project_entry(name, meta, url, desc) = [
   #text(weight: "bold")[#name]#text(style: "italic", size: 0.85em)[ (#meta)] #h(1fr)
-  #link(url)[[link]] \
+  #if for_printing [
+    \
+  ] else [
+    #link(url)[[link]] \
+  ]
   #desc
 ]
 

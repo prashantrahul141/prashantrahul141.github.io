@@ -7,11 +7,15 @@ import json
 import sys
 from build_gh_repos import fetch_repos
 
+
 PRE_PROJ_FILE = "./static/resume-typst/01-pre-proj.typ"
 POST_PROJ_FILE = "./static/resume-typst/02-post-proj.typ"
 OUT_FILENAME = "Prashant-Rahul-CV.pdf"
+OUT_FILENAME_PRINTING = "Prashant-Rahul-CV-print.pdf"
 OUT_TYPST_FILEPATH = "./static/resume-typst/resume.typ"
 OUT_FILEPATH = f"./static/{OUT_FILENAME}"
+OUT_FILEPATH_PRINTING = f"./static/{OUT_FILENAME_PRINTING}"
+
 
 if not os.path.exists(PRE_PROJ_FILE):
     print(f"ERROR: Pre proj file does not exist, {PRE_PROJ_FILE=}")
@@ -25,7 +29,6 @@ if not os.path.exists(POST_PROJ_FILE):
 with open(PRE_PROJ_FILE, "r", encoding="utf-8") as pre_file:
     with open(OUT_TYPST_FILEPATH, "w", encoding="utf-8") as out_file:
         out_file.write(pre_file.read())
-
 
 # fetch repos
 response = fetch_repos()
@@ -57,11 +60,37 @@ with open(OUT_TYPST_FILEPATH, "a", encoding="utf-8") as out_file:
     with open(POST_PROJ_FILE, "r", encoding="utf-8") as post_proj_file:
         out_file.write(post_proj_file.read())
 
-# generate file
+# generate file: digital
 subprocess.run(
-    ["typst", "compile", "--format", "pdf", OUT_TYPST_FILEPATH, OUT_FILEPATH],
+    [
+        "typst",
+        "compile",
+        "--input",
+        "for_printing=false",
+        "--format",
+        "pdf",
+        OUT_TYPST_FILEPATH,
+        OUT_FILEPATH,
+    ],
+    check=True,
+)
+print(f"Produces = {OUT_FILEPATH}")
+
+# generate file: for printing
+subprocess.run(
+    [
+        "typst",
+        "compile",
+        "--input",
+        "for_printing=true",
+        "--format",
+        "pdf",
+        OUT_TYPST_FILEPATH,
+        OUT_FILEPATH_PRINTING,
+    ],
     check=True,
 )
 
+print(f"Produces = {OUT_FILEPATH_PRINTING}")
+
 print("Finished building resume....")
-print(f"Produces = {OUT_FILEPATH}")
