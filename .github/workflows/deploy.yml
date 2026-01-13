@@ -31,6 +31,6 @@ jobs:
         run: nix develop --command make ci
 
       - name: Build and Deploy
-        uses: shalzz/zola-deploy-action@master
+        uses: shalzz/zola-deploy-action@v0.21.0
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
