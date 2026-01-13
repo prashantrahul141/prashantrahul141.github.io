@@ -65,7 +65,7 @@
   "Cypherock",
   "Gurugram",
   "Remote",
-  "Aug 2024 – present",
+  "Aug 2025 – present",
   "Software Engineer Intern",
   [
     #list(tight: true, indent: 10pt)[
