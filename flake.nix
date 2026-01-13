@@ -1,7 +1,7 @@
 {
   description = "dev environment";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
   outputs =
@@ -14,8 +14,11 @@
         packages = with pkgs; [
           zola # static site builder
 
-          python313Full
-          python313Packages.toml # converting json to toml
+          (python313.withPackages (
+            python-pkgs: with python-pkgs; [
+              toml # converting json to toml
+            ]
+          ))
 
           # fonts
           pkgs.lmodern
