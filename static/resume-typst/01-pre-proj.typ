@@ -10,7 +10,7 @@
   justify: true,
 )
 #let list_vspace = [
-  #v(0.6em)
+  #v(0.5em)
 ]
 
 // determines whether this pdf is for printing or not.
@@ -20,11 +20,16 @@
 
 // ---------- helpers ----------
 #let section(title) = [
-  #heading[
-    #text(weight: "semibold")[#title]
-  ]
+  #v(0.5em)
+  #text(
+    size: 1.25em,
+    weight: "semibold",
+  )[#title]
+  #v(-0.1em)
   #line(length: 100%)
+  #v(-0.1em)
 ]
+
 
 #let oss_entry(name, url, body) = [
   #text(weight: "bold")[#name] #h(1fr)
@@ -79,7 +84,7 @@
   "Cypherock",
   "Gurugram",
   "Remote",
-  "Aug 2025 – present",
+  "Aug 2025 – Jan 2026",
   "Software Engineer Intern",
   [
     #list(tight: true, indent: 10pt)[
@@ -91,9 +96,23 @@
 
 // --------- open soy contributions ----------
 #section("Open source contributions")
+
+#oss_entry(
+  "RTEMS - RTOS for Multiprocessor Systems",
+  "https://gitlab.rtems.org/rtems",
+  [
+    #list(tight: true, indent: 10pt)[
+      Enabled IMFS testing on BSPs with tight memory constraints, like the sparc/erc32 bsp
+    ][
+      Rewrote binary file to C source utility in python
+    ]],
+)
+
+#list_vspace
+
 #oss_entry(
   "The Julia Programming Language",
-  "https://github.com/JuliaLang/julia/issues?q=author%3Aprashantrahul141",
+  "https://github.com/JuliaLang/julia",
   [
     #list(tight: true, indent: 10pt)[
       Improved performance in show() for UnitRange append! for AbstractVector
@@ -101,6 +120,8 @@
       Quality of life improvement when displaying empty ranges
     ]],
 )
+
+
 
 // ----------- education ---------------
 
