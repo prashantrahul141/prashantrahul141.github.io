@@ -51,4 +51,8 @@ stylesheets = [
 ]
 
 [extra.analytics]
-enabled = false
+enable = true
+
+[extra.analytics.goatcounter]
+user = "prashant141"
+host = "goatcounter.com"
