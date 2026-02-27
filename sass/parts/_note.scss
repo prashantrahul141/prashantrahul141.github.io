@@ -43,7 +43,7 @@
 }
 
 .note-toggle {
-  font-family: inherit; 
+  font-family: inherit;
   padding: 10px 25px; /* Stop header intersecting with note-icon */
   cursor: pointer;
   position: relative;
@@ -83,8 +83,5 @@
 
 summary:hover,
 summary:focus {
-  color: var(--primary-color);
-  background-color: var(--note-header-bg);
   outline: none;
-  padding: 10px;
 }
