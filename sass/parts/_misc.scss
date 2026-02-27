@@ -68,6 +68,23 @@ time {
   padding: 1rem 0 0 0;
 }
 
+/* button */
+button {
+  border: none;
+  outline: none;
+  border-radius: .1rem;
+  padding: 5px 20px;
+  border-bottom: 3px solid var(--primary-color);
+  color: inherit;
+  background-color: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+  background-color: var(--primary-color);
+}
+
 /* Post list */
 .list-item {
   margin-bottom: 30px;
