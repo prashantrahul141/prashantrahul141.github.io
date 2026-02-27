@@ -7,7 +7,7 @@ word_count = false
 read_time = true
 
 [taxonomies]
-tags=["rust", "brainfuck"]
+tags=["tech", "rust", "brainfuck"]
 +++
 
 # Links
