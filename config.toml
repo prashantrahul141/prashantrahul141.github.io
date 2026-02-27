@@ -4,7 +4,7 @@ compile_sass = true
 description = "I am an undergraduate junior interested in building and tinkering with compilers and interpreters. I also work on emulators, graphics APIs, games, cross-platform applications, and full-stack web experiences."
 generate_feeds = true
 minify_html = true
-taxonomies = [{name = "tags"}]
+taxonomies = [{ name = "tags" }]
 title = "~/prashant"
 
 [search]
@@ -27,27 +27,27 @@ remote_logo_image = "https://raw.githubusercontent.com/prashantrahul141/prashant
 mathjax = true
 mathjax_dollar_inline_enable = true
 repo_url = "https://github.com/prashantrahul141/prashantrahul141.github.io/tree/main/content/"
-theme = "auto" # light, dark, auto, toggle
+theme = "auto"                                                                                                                            # light, dark, auto, toggle
 toc = true
 use_cdn = false
 
 menu = [
-  {name = "~/posts", url = "/posts", weight = 1},
-  {name = "~/gallery", url = "/gallery", weight = 2},
-  { name = "~/resume", url = "/Prashant-Rahul-CV.pdf", weight = 3}
+    { name = "~/posts", url = "/posts", weight = 1 },
+    { name = "~/gallery", url = "/gallery", weight = 2 },
+    { name = "~/resume", url = "/Prashant-Rahul-CV.pdf", weight = 3 },
 ]
 
 show_social_on_nav = false
 socials = [
-  {name = "github", url = "https://github.com/prashantrahul141/", icon = "github"},
-  {name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email"},
-  {name = "dotfiles", url = "https://www.github.com/prashantrahul141/dotfiles"},
-  {name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter"},
-  {name = "linkedin", url = "https://www.linkedin.com/in/prashantrahul141/", icon = "linkedin"},
+    { name = "github", url = "https://github.com/prashantrahul141/", icon = "github" },
+    { name = "mail", url = "mailto:prashantrahul141@protonmail.com", icon = "email" },
+    { name = "dotfiles", url = "https://www.github.com/prashantrahul141/dotfiles" },
+    { name = "twitter", url = "https://x.com/prashrahul141/", icon = "twitter" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/prashantrahul141/", icon = "linkedin" },
 ]
 
 stylesheets = [
-  #"custom.css"    # at /static/custom.css
+    #"custom.css"    # at /static/custom.css
 ]
 
 [extra.analytics]
