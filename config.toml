@@ -51,7 +51,7 @@ stylesheets = [
 ]
 
 [extra.analytics]
-enable = true
+enable = false
 
 [extra.analytics.goatcounter]
 user = "prashant141"
