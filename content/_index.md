@@ -3,9 +3,9 @@ title= "Prashant Rahul"
 template = "homepage.html"
 +++
 
-i am an undergraduate junior interested in embedded systems, compilers, and low-level software.
+i am an undergraduate junior interested in embedded systems, compilers, and low-level software
 
-i like a lot of things, including computers, video games, [cats](./other-images/theatombrothers.avif), [dogs](./other-images/0braincells.avif), alt-pop music, philosophy, history, cooking, and more
+i like a lot of things, including tiny computers, video games, [cats](./other-images/theatombrothers.avif), [dogs](./other-images/0braincells.avif), [cosmology](./other-images/Pale_Blue_Dot.png), cooking, alt-pop music, philosophy, history, and more
 
 
 i sometimes post [here](https://prashantrahul.com/posts/)\
