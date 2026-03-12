@@ -54,7 +54,7 @@ Here is an example of such structure:
 
 {{ centered_img(url="/posts/images/0005.png", alt="hierarchy") }}
 
-This has one root directory, denoted by `/`, which contains a file named `foo.txt` and a directory named `bar`. This `bar` directory contains a file `cta.png` and another directory named `bar`, overall creating a structure that resembles a tree. These underlying files and directories can be referenced using a “path.” A path is a collection of human readable names of files or directories joined together by a delimiter. In most Unix systems, this delimiter is simply `/`. For instance, the file `cta.png` can be referenced as `/bar/cta.png`.
+This has one root directory, denoted by `/`, which contains a file named `foo.txt` and a directory named `bar`. This `bar` directory contains a file `cta.png` and another directory named `baz`, overall creating a structure that resembles a tree. These underlying files and directories can be referenced using a “path.” A path is a collection of human readable names of files or directories joined together by a delimiter. In most Unix systems, this delimiter is simply `/`. For instance, the file `cta.png` can be referenced as `/bar/cta.png`.
 
 If you inspect `bar` directory it would look something like:
 
@@ -67,7 +67,7 @@ If you inspect `bar` directory it would look something like:
 ]
 ```
 
-We find our file `cta.png` and the directory `bar`, but what are `.` and `..`? In most Unix like operating systems, `.` denotes the current directory and `..` denotes the parent directory. Even empty directories, at the very least, contain these two entries in order to maintain the tree structure.
+We find our file `cta.png` and the directory `baz`, but what are `.` and `..`? In most Unix like operating systems, `.` denotes the current directory and `..` denotes the parent directory. Even empty directories, at the very least, contain these two entries in order to maintain the tree structure.
 
 You can inspect this right now by running:
 
@@ -115,13 +115,13 @@ $inodeSize = 256$
 
 $blockSize = 4 \times 1024$
 
-$blockCount = blockSize \div inodeSize$
+$inodeCount = blockSize \div inodeSize$
 
 $= (4 \times 1024) \div 256$
 
 $= 16$
 
-If we consider 5 blocks for our inodes, we should be able to store $(5 \times 4 \times 1024) \div 256$ or $80$ inodes. That is more than enough for our 64 blocks memory.
+If we consider 5 blocks for our inodes, we should be able to store $5 \times 16$ or $80$ inodes. That is more than enough for our 64 blocks memory.
 
 {{ centered_img(url="/posts/images/0010.png", alt="User data and inodes in 256KB of memory in blocks") }}
 
