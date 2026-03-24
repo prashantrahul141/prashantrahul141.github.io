@@ -7,3 +7,4 @@ gallery-images.toml
 *.out
 output.tex
 resume.typ
+*.pdf
