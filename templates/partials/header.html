@@ -7,68 +7,36 @@
     <meta name="base" content="{{ config.base_url }}">
     <meta name="darkreader-lock">
 
-    {% if page.extra.meta %}
-         <!-- the meta data config goes here  -->
-         {% for data in page.extra.meta %}
-             <meta
-                 {% for key, value in data%}
-                     {% if key == "property" and value == "og:title"%}
-                         {% set_global page_has_og_title = true -%}
-                     {% endif %}
-                     {% if key == "property" and value == "og:description"%}
-                         {% set_global page_has_og_description = true -%}
-                     {% endif %}
-                     {% if key == "name" and value == "description"%}
-                         {% set_global page_has_description = true -%}
-                     {% endif %}
-                     {{ key }}="{{ value }}"
-                {% endfor %}
-            />
-        {% endfor %}
-    {% endif %}
-
     {# Site title #}
     {% set current_path = current_path | default(value="/") %}
     {% if current_path == "/" %}
-    <title>
-        {{ config.title | default(value="Home") }}
-    </title>
-    {% if not page_has_og_title %}
-        <meta property="og:title" content="{{ config.title | default(value="Home") }}" />
-    {% endif %}
-
+        <title>
+            {{ config.title | default(value="Home") }}
+        </title>
+        <meta property="og:title" content="{{ config.title | default(value="~/prashant") }}" />
     {% else %}
-    <title>
-        {% if page.title %} {{ page.title }}
-        {% elif section.title %} {{ section.title }}
-        {% elif config.title %} {{ config.title }}
-        {% else %} Post {% endif %}
-    </title>
-
-        {% if not page_has_og_title %}
-            <meta property="og:title" content="{% if page.title -%}{{ page.title }}{% elif config.title -%}{{ config.title }}{% else -%}Post{% endif -%}" />
-        {% endif %}
+        <title>
+            {% if page.title %} {{ page.title }}
+            {% elif section.title %} {{ section.title }}
+            {% elif config.title %} {{ config.title }}
+            {% else %} Post
+            {% endif %}
+        </title>
+        <meta property="og:title" content="{% if page.title -%}{{ page.title }}{% elif config.title -%}{{ config.title }}{% else -%}Post{% endif -%}" />
      {% endif %}
 
-     {% if not page_has_og_description %}
-         {% if page.description %}
-             <meta property="og:description" content="{{ page.description }}" />
-         {% elif config.description %}
-             <meta property="og:description" content="{{ config.description }}" />
-         {% endif %}
+     {% if page.description %}
+         <meta property="og:description" content="{{ page.description }}" />
+         <meta name="description" content="{{ page.description }}" />
+     {% elif config.description %}
+         <meta property="og:description" content="{{ config.description }}" />
+         <meta name="description" content="{{ config.description }}" />
      {% endif %}
 
-     {% if not page_has_og_image %}
-        <meta property="og:image" content="{{ config.extra.remote_logo_image }}" />
-     {% endif %}
-
-     {% if not page_has_description %}
-         {% if page.description %}
-             <meta name="description" content="{{ page.description }}" />
-         {% elif config.description %}
-
-             <meta name="description" content="{{ config.description }}" />
-         {% endif %}
+    {% if page.extra.image %}
+       <meta property="og:image" content="{{ page.extra.image }}" />
+    {% elif config.extra.remote_logo_image %}
+       <meta property="og:image" content="{{ config.extra.remote_logo_image }}" />
     {% endif %}
 
     {# Favicon #}
