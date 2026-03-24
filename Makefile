@@ -20,7 +20,7 @@ GALLERY_INDEX_FILE = gallery-images.toml
 resume: $(RESUME_OUTFILE)
 
 $(RESUME_OUTFILE): $(RESUME_INFILE) $(REPO_INDEX_FILE)
-	./build_resume.py
+	./scripts/build_resume.py
 
 # both index
 index: repos gallery
@@ -29,13 +29,13 @@ index: repos gallery
 repos: $(REPO_INDEX_FILE)
 
 $(REPO_INDEX_FILE):
-	./build_gh_repos.py
+	./scripts/build_gh_repos.py
 
 # gallery index
 gallery: $(GALLERY_INDEX_FILE)
 
 $(GALLERY_INDEX_FILE):
-	./build_gallery_index.py
+	./scripts/build_gallery_index.py
 
 # cleanup
 clean: clean-repos clean-gallery-images clean-resume
