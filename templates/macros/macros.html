@@ -264,3 +264,7 @@
     {% endfor -%}
     </div>
 {% endmacro cards_posts %}
+
+{% macro site_title() %}
+    {{ config.title | default(value="~/prashant") }}
+{% endmacro %}

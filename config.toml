@@ -20,6 +20,7 @@ highlight_theme = "ayu-light"
 
 [extra]
 dynamic_note = true
+generate_feeds = true
 fancy_code = true
 favicon = "/icons/favicon.ico"
 logo = "/icons/logo.avif"

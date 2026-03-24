@@ -124,8 +124,22 @@
 
      <script src={{ get_url(path="js/gallery-images.js") }}></script>
 
-    {# RSS #}
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+    {# rss #}
+    {% if config.generate_feeds %}
+        {% for feed_filenames in config.feed_filenames %}
+            {% if feed_filenames == "atom.xml" %}
+                <link rel="alternate"
+                      type="application/atom+xml"
+                      title="{{ post_macros::site_title() }}"
+                      href="{{ get_url(path='atom.xml', trailing_slash=false) }}" />
+            {% elif feed_filenames == "rss.xml" %}
+                <link rel="alternate"
+                      type="application/rss+xml"
+                      title="{{ post_macros::site_title() }}"
+                      href="{{ get_url(path='rss.xml', trailing_slash=false) }}" />
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 
 
     {# mathjax setup #}
