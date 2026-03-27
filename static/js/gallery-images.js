@@ -1,22 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".gallery-img");
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector('.gallery');
 
-    images.forEach(img => {
-        if (img.complete) {
-            updateImageClass(img);
-        } else {
-            img.onload = () => updateImageClass(img);
-        }
+  function resizeAll() {
+    const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const img = item.querySelector('img');
+
+      const resize = () => {
+        const width = item.clientWidth;
+        const height = img.naturalHeight / img.naturalWidth * width;
+        const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+        item.style.gridRowEnd = `span ${rowSpan}`;
+      };
+
+      if (img.complete) {
+        resize();
+      } else {
+        img.onload = resize;
+      }
     });
 
-    function updateImageClass(img) {
-        let aspectRatio = img.naturalWidth / img.naturalHeight;
-        let parent = img.closest(".gallery-item");
+    grid.classList.add('ready');
+  }
 
-        if (aspectRatio > 1.2) {
-            parent.classList.add("landscape");
-        } else {
-            parent.classList.add("portrait");
-        }
-    }
+  window.addEventListener('load', resizeAll);
+  window.addEventListener('resize', resizeAll);
 });

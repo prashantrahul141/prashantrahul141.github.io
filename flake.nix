@@ -21,15 +21,19 @@
           ))
 
           # fonts
-          pkgs.lmodern
+          lmodern
+          jetbrains-mono
 
           typst
 
           gnumake # eh
+
+          python3
+          python3Packages.pillow
         ];
 
         # make font available for typst
-        TYPST_FONT_PATHS = "${pkgs.lmodern}/share/fonts/";
+        TYPST_FONT_PATHS = "${pkgs.lmodern}/share/fonts/:${pkgs.jetbrains-mono}/share/fonts/";
 
         shellHook = ''
           echo "Run make serve or make build"
