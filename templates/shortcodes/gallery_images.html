@@ -3,7 +3,9 @@
 <main class="gallery">
     {% for file in data.gallery.images %}
         <div class="gallery-item">
-        <img class="gallery-img" src="/gallery-images/{{ file.filename }}" alt="{{ file.alt }}" />
+            <a target="_blank" href="/gallery-images/{{ file.filename }}">
+                <img class="gallery-img" src="/gallery-images/{{ file.filename }}" alt="{{ file.alt }}" />
+            </a>
         </div>
     {% endfor %}
 </main>
