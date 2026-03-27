@@ -1,3 +1,6 @@
+# WARN: NOT USED ANYMORE
+# WE DO MANUAL INDEXING NOW
+
 #!/usr/bin/env python
 
 import os

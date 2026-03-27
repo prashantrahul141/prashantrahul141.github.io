@@ -1,0 +1,14 @@
+[gallery]
+images = [
+    { filename = "001-Flower.webp", alt = "Flower" },
+    { filename = "002-Sky.webp", alt = "Sky" },
+    { filename = "003-Sky.webp", alt = "Sky", subtext = "last day at school" },
+    { filename = "004-Flower_And_Sky.webp", alt = "Flower And Sky" },
+    { filename = "005-Tree_And_Sky.webp", alt = "Tree And Sky" },
+    { filename = "006-Sky.webp", alt = "Sky" },
+    { filename = "007-Sky_From_Above.webp", alt = "Sky From Above", subtext = "snake?" },
+    { filename = "008-Cray_Fish.webp", alt = "Cray Fish", subtext = "whole lotta red" },
+    { filename = "009-Parakeet.webp", alt = "Parakeet", subtext = "burb" },
+    { filename = "010-Streetlights.webp", alt = "Streetlights" },
+    { filename = "011-Evening_Sky_From_Above.webp", alt = "Evening Sky From Above", subtext = "sleepy" },
+]
