@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = item.querySelector('img');
 
       const resize = () => {
-        const width = item.clientWidth;
-        const height = img.naturalHeight / img.naturalWidth * width;
-        const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+        const content = item.querySelector('.gallery-content');
+        const totalHeight = content.getBoundingClientRect().height;
+        const rowSpan = Math.ceil((totalHeight + rowGap) / (rowHeight + rowGap));
         item.style.gridRowEnd = `span ${rowSpan}`;
       };
 

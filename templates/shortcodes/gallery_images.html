@@ -1,11 +1,22 @@
-{% set data = load_data(path="gallery-images.toml") %}
+{% set data = load_data(path="static/gallery-images/gallery-images.toml") %}
 
 <main class="gallery">
     {% for file in data.gallery.images %}
         <div class="gallery-item">
-            <a target="_blank" href="/gallery-images/{{ file.filename }}">
-                <img class="gallery-img" src="/gallery-images/{{ file.filename }}" alt="{{ file.alt }}" />
-            </a>
+            {% if file.subtext %}
+                <div class="gallery-content" title="{{ file.subtext }}">
+            {% else %}
+                <div class="gallery-content" title="{{ file.alt }}">
+            {% endif %}
+                 <a target="_blank" href="/gallery-images/{{ file.filename }}">
+                     <img class="gallery-img" src="/gallery-images/{{ file.filename }}" alt="{{ file.alt }}" />
+                 </a>
+                 {% if file.subtext %}
+                    <div class="gallery-subtext-container">
+                        <p class="gallery-subtext">{{ file.subtext }}</p>
+                    </div>
+                 {% endif %}
+            </div>
         </div>
     {% endfor %}
 </main>
