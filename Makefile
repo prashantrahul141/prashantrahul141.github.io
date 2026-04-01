@@ -34,6 +34,10 @@ $(REPO_INDEX_FILE):
 generate_doodles:
 	cd ./scripts/thumbnail/ && bash svg-to-png.sh
 
+# run using `make generate_thumbnail TITLE="Title of the Blog"`
+generate_thumbnail:
+	./scripts/gen_meta_images.py "$(TITLE)"
+
 # cleanup
 clean: clean-repos clean-gallery-images clean-resume
 
