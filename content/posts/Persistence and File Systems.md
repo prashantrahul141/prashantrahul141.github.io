@@ -2,9 +2,11 @@
 title = "Persistence and Filesystems"
 date = 2026-02-27
 word_count = false
+description = "My attempt at understanding how filesystems achieve persistence by structuring data into files and directories. How core components like inodes, blocks, bitmaps, and the superblock coordinate storage and metadata. A perspective on how operating systems maintain consistent, durable data across reboots."
 
 [extra]
 read_time = true
+image = "/posts/thumbnails/persistence-and-filesystems.png"
 
 [taxonomies]
 tags=["tech", "filesystem", "operating systems"]
