@@ -34,9 +34,9 @@
      {% endif %}
 
     {% if page.extra.image %}
-       <meta property="og:image" content="{{ page.extra.image }}" />
+        <meta property="og:image" content="{{ config.base_url }}{{ page.extra.image }}" />
     {% elif config.extra.remote_logo_image %}
-       <meta property="og:image" content="{{ config.extra.remote_logo_image }}" />
+        <meta property="og:image" content="{{ config.base_url }} {{ config.extra.remote_logo_image }}" />
     {% endif %}
 
     {# Favicon #}
