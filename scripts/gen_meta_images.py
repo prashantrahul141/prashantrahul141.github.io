@@ -61,9 +61,9 @@ def create_image(text: str) -> Image.Image:
         background.paste(overlay, (int(sample[0]), int(sample[1])), overlay)
 
     # border
-    background = ImageOps.expand(
-        background, border=BORDER_WITDH, fill=PRIMARY_TEXT_COLOR
-    )
+    # background = ImageOps.expand(
+    #     background, border=BORDER_WITDH, fill=PRIMARY_TEXT_COLOR
+    # )
 
     # drawable
     draw = ImageDraw.Draw(background)
