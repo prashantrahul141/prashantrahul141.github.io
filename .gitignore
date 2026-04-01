@@ -7,3 +7,4 @@ repos.toml
 output.tex
 resume.typ
 *.pdf
+/scripts/thumbnail/*.png

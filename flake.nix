@@ -30,6 +30,7 @@
 
           python3
           python3Packages.pillow
+          cairosvg # svg to png
         ];
 
         # make font available for typst

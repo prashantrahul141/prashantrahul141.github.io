@@ -30,6 +30,9 @@ repos: $(REPO_INDEX_FILE)
 $(REPO_INDEX_FILE):
 	./scripts/build_gh_repos.py
 
+# prebuild
+generate_doodles:
+	cd ./scripts/thumbnail/ && bash svg-to-png.sh
 
 # cleanup
 clean: clean-repos clean-gallery-images clean-resume
