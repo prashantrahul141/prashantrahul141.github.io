@@ -10,7 +10,7 @@
   justify: true,
 )
 #let list_vspace = [
-  #v(0.5em)
+  #v(0.4em)
 ]
 
 // determines whether this pdf is for printing or not.
@@ -20,7 +20,7 @@
 
 // ---------- helpers ----------
 #let section(title) = [
-  #v(0.5em)
+  #v(0.4em)
   #text(
     size: 1.25em,
     weight: "semibold",
@@ -88,9 +88,9 @@
   "Software Engineer Intern",
   [
     #list(tight: true, indent: 10pt)[
-      Implemented the Canton Network within STM32 embedded firmware for the X1 crypto hardware wallet, supporting 30K+ users
+      Implemented the Canton Network within STM32 embedded firmware for the X1 crypto hardware wallet, including writing real time encoders and decoders, hashing and signing Canton transactions.
     ][
-      Ocassionally worked on the Electron side of things]
+      Ocassionally worked on the Electron side of things with typescript]
   ],
 )
 
@@ -104,7 +104,7 @@
     #list(tight: true, indent: 10pt)[
       Enabled IMFS testing on BSPs with tight memory constraints, like the sparc/erc32 bsp
     ][
-      Rewrote binary file to C source utility in python
+      Implemented POSIX compliant `ENAMETOOLONG` handling in `cpukit/libio` by validating path components against `NAME_MAX` during filesystem path evaluation
     ]],
 )
 
@@ -117,7 +117,7 @@
     #list(tight: true, indent: 10pt)[
       Improved performance in show() for UnitRange append! for AbstractVector
     ][
-      Quality of life improvement when displaying empty ranges
+      Quality of life improvements when displaying empty ranges
     ]],
 )
 
