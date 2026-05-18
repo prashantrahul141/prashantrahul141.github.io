@@ -1,0 +1,16 @@
+[gallery]
+images = [
+    { filename = "013-Pamphlet_On_Ground.webp", alt = "Pamphlet On Ground", subtext = "do NOT" },
+    { filename = "012-Streetlight_Dark.webp", alt = "Streetlight in the dark during rain", subtext = "rain can be deafening" },
+    { filename = "011-Evening_Sky_From_Above.webp", alt = "Evening Sky From Above", subtext = "sleepy" },
+    { filename = "010-Streetlights.webp", alt = "Streetlights" },
+    { filename = "009-Parakeet.webp", alt = "Parakeet", subtext = "burb" },
+    { filename = "008-Cray_Fish.webp", alt = "Cray Fish", subtext = "whole lotta red" },
+    { filename = "007-Sky_From_Above.webp", alt = "Sky From Above", subtext = "snake?" },
+    { filename = "006-Sky.webp", alt = "Sky" },
+    { filename = "005-Tree_And_Sky.webp", alt = "Tree And Sky" },
+    { filename = "004-Flower_And_Sky.webp", alt = "Flower And Sky" },
+    { filename = "003-Sky.webp", alt = "Sky", subtext = "last day at school" },
+    { filename = "002-Sky.webp", alt = "Sky" },
+    { filename = "001-Flower.webp", alt = "Flower" },
+]
