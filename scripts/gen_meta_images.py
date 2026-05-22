@@ -10,7 +10,7 @@ from poisson_disc import PoissonDisc
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageEnhance
 
-IMG_WIDTH, IMG_HEIGHT = 1284, 724
+IMG_WIDTH, IMG_HEIGHT = 1200, 630
 
 PRIMARY_TEXT_COLOR = "#ef5350"
 SECONDARY_TEXT_COLOR = "#ffffff77"
