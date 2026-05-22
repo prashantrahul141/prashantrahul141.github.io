@@ -22,6 +22,7 @@ FONT_SUBTEXT = ImageFont.truetype("JetBrainsMonoNL-Regular.ttf", 28)
 
 SCRIPT_DIR = Path(__file__).parent
 DOODLES_DIR = path.join(SCRIPT_DIR, "thumbnail/")
+OUT_DIR = path.join(SCRIPT_DIR, "../static/posts/thumbnails/")
 
 AUTHOR_TEXT = "Prashant Rahul"
 
@@ -100,7 +101,7 @@ title = sys.argv[1]
 if len(title) < 1:
     print("empty title")
     sys.exit(0)
-out_title = title.lower().replace(" ", "-") + ".png"
+out_title = path.join(OUT_DIR, title.lower().replace(" ", "-") + ".png")
 img = create_image(title)
 img.save(out_title)
 print(f"Generated: {out_title}")
