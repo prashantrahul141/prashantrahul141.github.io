@@ -37,8 +37,12 @@ response = fetch_repos()
 data = json.loads(response)
 edges = data["data"]["user"]["pinnedItems"]["edges"]
 
+if not isinstance(edges, list):
+    print(f"ERROR: edges are not available as a list, edges={edges}")
+    sys.exit(-1)
+
 out = []
-for edge in edges:
+for edge in edges[:4]:
     node = edge["node"]
     name = node["name"]
     url = node["url"]
