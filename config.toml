@@ -1,7 +1,6 @@
 base_url = "https://prashantrahul.com"
 build_search_index = false
 compile_sass = true
-description = "I am an undergraduate junior interested in building and tinkering with compilers and interpreters. I also work on emulators, graphics APIs, games, cross-platform applications, and full-stack web experiences."
 generate_feeds = true
 minify_html = true
 taxonomies = [{ name = "tags" }]
