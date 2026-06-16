@@ -1,5 +1,8 @@
 // ----------- setup -----------
-#set page("us-letter", margin: 0.5in)
+#set page("us-letter", margin: (
+  x: 0.6in,
+  y: 0.6in,
+))
 #set text(font: "Latin Modern Roman")
 #let linkcolor = rgb("1155CC")
 #show link: set text(fill: linkcolor, size: 0.95em, font: "Latin Modern Mono")
@@ -42,7 +45,12 @@
 ]
 
 #let work_entry(org, location, mode, date, role, body) = [
-  #text(weight: "bold")[#org, #location] #(text(style: "italic", size: 0.85em)[(#mode)]) #h(1fr)
+  #text(weight: "bold")[
+    #org,
+    #location
+  ]
+  #(text(style: "italic", size: 0.85em)[(#mode)])
+  #h(1fr)
   #text(style: "italic")[#date] \
   #role
   #body
@@ -50,7 +58,8 @@
 
 
 #let project_entry(name, meta, url, desc) = [
-  #text(weight: "bold")[#name]#text(style: "italic", size: 0.85em)[ (#meta)] #h(1fr)
+  #text(weight: "bold")[#name]#text(style: "italic", size: 0.85em)[ (#meta)]
+  #h(1fr)
   #if for_printing [
     \
   ] else [
@@ -60,7 +69,8 @@
 ]
 
 #let education_entry(title, date, institution) = [
-  #text(weight: "bold")[#title] #h(1fr)
+  #text(weight: "bold")[#title]
+  #h(1fr)
   #text(style: "italic")[#date] \
   #institution
 ]
@@ -90,12 +100,20 @@
     #list(tight: true, indent: 10pt)[
       Implemented the Canton Network within STM32 embedded firmware for the X1 crypto hardware wallet, including writing real time encoders and decoders, hashing and signing Canton transactions.
     ][
-      Ocassionally worked on the Electron side of things with typescript]
+      Contributed to the Electron frontend application, developing features using Typescript.]
   ],
 )
 
 // --------- open soy contributions ----------
-#section("Open source contributions")
+#section("Open Source & Programs")
+#oss_entry(
+  "Linux Kernel Summer 2026 - The Linux Foundation",
+  "https://www.linuxfoundation.org",
+  [
+  ],
+)
+
+#list_vspace
 
 #oss_entry(
   "RTEMS - RTOS for Multiprocessor Systems",
@@ -120,7 +138,6 @@
       Quality of life improvements when displaying empty ranges
     ]],
 )
-
 
 
 // ----------- education ---------------
