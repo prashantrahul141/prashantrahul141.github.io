@@ -64,3 +64,7 @@ enable = false
 [extra.analytics.goatcounter]
 user = "prashant141"
 host = "goatcounter.com"
+
+
+[extra.projects]
+show_stars = true
