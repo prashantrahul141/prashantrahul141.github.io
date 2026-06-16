@@ -14,9 +14,17 @@ include_path = true
 include_title = true
 index_format = "elasticlunr_json"
 
-[markdown]
-highlight_code = true
-highlight_theme = "ayu-light"
+[markdown.highlighting]
+error_on_missing_language = true
+style = "inline"
+light_theme = "github-light"
+dark_theme = "github-dark"
+# A list of files for additional JSON TextMate grammars
+extra_grammars = []
+# A list of files for additional JSON TextMate themes
+# Get themes from https://textmate-grammars-themes.netlify.app/
+extra_themes = []
+
 
 [extra]
 dynamic_note = true
