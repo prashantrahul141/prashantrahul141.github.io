@@ -110,7 +110,11 @@
   "Linux Kernel Summer 2026 - The Linux Foundation",
   "https://www.linuxfoundation.org",
   [
-  ],
+    #list(tight: true, indent: 10pt)[
+      Improved the Octeon staging Ethernet driver by replacing panic() calls with proper error propagation and resource unwinding on probe failures.
+    ][
+      Updated the TI ADC081C and ADC084S021 drivers to use dev_err_probe(), simplifying probe error handling and supporting deferred probing.
+    ]],
 )
 
 #list_vspace
