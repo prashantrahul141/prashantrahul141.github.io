@@ -8,6 +8,7 @@ import sys
 from build_gh_repos import fetch_repos
 
 
+PROJECTS_COUNT = 3
 PRE_PROJ_FILE = "./static/resume-typst/01-pre-proj.typ"
 POST_PROJ_FILE = "./static/resume-typst/02-post-proj.typ"
 OUT_FILENAME = "Prashant-Rahul-CV.pdf"
@@ -42,7 +43,7 @@ if not isinstance(edges, list):
     sys.exit(-1)
 
 out = []
-for edge in edges[:4]:
+for edge in edges[:PROJECTS_COUNT]:
     node = edge["node"]
     name = node["name"]
     url = node["url"]
