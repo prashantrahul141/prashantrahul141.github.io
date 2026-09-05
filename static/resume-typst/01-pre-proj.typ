@@ -91,6 +91,21 @@
 // --------- work ----------
 #section("Work experience")
 #work_entry(
+  "TinkerBloX",
+  "Coimbatore",
+  "Remote",
+  "Aug 2026 – present",
+  "Research and Development System Engineer",
+  [
+    #list(tight: true, indent: 10pt)[
+      Developing a low-level container runtime in Rust, using Linux namespaces, cgroups, and other kernel primitives.
+    ]
+  ],
+)
+
+#list_vspace
+
+#work_entry(
   "Cypherock",
   "Gurugram",
   "Remote",
