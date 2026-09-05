@@ -8,7 +8,7 @@ import sys
 from build_gh_repos import fetch_repos
 
 
-PROJECTS_COUNT = 3
+PROJECTS_COUNT = 1
 PRE_PROJ_FILE = "./static/resume-typst/01-pre-proj.typ"
 POST_PROJ_FILE = "./static/resume-typst/02-post-proj.typ"
 OUT_FILENAME = "Prashant-Rahul-CV.pdf"
