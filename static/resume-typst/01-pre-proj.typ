@@ -84,7 +84,7 @@
   stroke: 0pt,
   inset: 0.3em,
   [Home:], [#link("https://prashantrahul.com")[prashantrahul.com]],
-  [Email:], [#link("mailto:prashantrahul141@protonmail.com")[prashantrahul141\@protonmail.com]],
+  [Email:], [#link("mailto:me@prashantrahul.com")[me\@prashantrahul.com]],
   [Github:], [#link("https://github.com/prashantrahul141")[github.com/prashantrahul141]],
 )
 
