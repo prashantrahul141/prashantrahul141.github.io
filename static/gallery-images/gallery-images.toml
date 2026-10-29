@@ -1,5 +1,9 @@
 [gallery]
 images = [
+    { filename = "018-Mehndi.jpg", alt = "hand with mehndi", subtext = "turned out rather nice, no?" },
+    { filename = "017-Cta.jpg", alt = "my cat", subtext = "the last of his curiosity" },
+    { filename = "016-Kanda-Batata-Poha.jpg", alt = "kanda batata poha", subtext = "this was bomb" },
+    { filename = "015-Shawarma.jpg", alt = "Shawarma (tasty)", subtext = "atleast there’s shawarma" },
     { filename = "014-Hesitation-is-Defeat.jpg", alt = "Moon behind white leaves", subtext = "hesitation is defeat" },
     { filename = "013-Pamphlet_On_Ground.jpg", alt = "Pamphlet On Ground", subtext = "do NOT" },
     { filename = "012-Streetlight_Dark.jpg", alt = "Streetlight in the dark during rain", subtext = "rain can be deafening" },
