@@ -1,5 +1,6 @@
 [gallery]
 images = [
+    { filename = "014-Hesitation-is-Defeat.jpg", alt = "Moon behind white leaves", subtext = "hesitation is defeat" },
     { filename = "013-Pamphlet_On_Ground.webp", alt = "Pamphlet On Ground", subtext = "do NOT" },
     { filename = "012-Streetlight_Dark.webp", alt = "Streetlight in the dark during rain", subtext = "rain can be deafening" },
     { filename = "011-Evening_Sky_From_Above.webp", alt = "Evening Sky From Above", subtext = "sleepy" },
