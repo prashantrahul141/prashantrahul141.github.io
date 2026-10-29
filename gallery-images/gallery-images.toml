@@ -1,0 +1,21 @@
+[gallery]
+images = [
+    { filename = "018-Mehndi.jpg", alt = "hand with mehndi", subtext = "turned out rather nice, no?" },
+    { filename = "017-Cta.jpg", alt = "my cat", subtext = "the last of his curiosity" },
+    { filename = "016-Kanda-Batata-Poha.jpg", alt = "kanda batata poha", subtext = "this was bomb" },
+    { filename = "015-Shawarma.jpg", alt = "Shawarma (tasty)", subtext = "atleast there’s shawarma" },
+    { filename = "014-Hesitation-is-Defeat.jpg", alt = "Moon behind white leaves", subtext = "hesitation is defeat" },
+    { filename = "013-Pamphlet_On_Ground.jpg", alt = "Pamphlet On Ground", subtext = "do NOT" },
+    { filename = "012-Streetlight_Dark.jpg", alt = "Streetlight in the dark during rain", subtext = "rain can be deafening" },
+    { filename = "011-Evening_Sky_From_Above.jpg", alt = "Evening Sky From Above", subtext = "sleepy" },
+    { filename = "010-Streetlights.jpg", alt = "Streetlights" },
+    { filename = "009-Parakeet.jpg", alt = "Parakeet", subtext = "burb" },
+    { filename = "008-Cray_Fish.jpg", alt = "Cray Fish", subtext = "whole lotta red" },
+    { filename = "007-Sky_From_Above.jpg", alt = "Sky From Above", subtext = "snake?" },
+    { filename = "006-Sky.jpg", alt = "Sky" },
+    { filename = "005-Tree_And_Sky.jpg", alt = "Tree And Sky" },
+    { filename = "004-Flower_And_Sky.jpg", alt = "Flower And Sky" },
+    { filename = "003-Sky.jpg", alt = "Sky", subtext = "last day at school" },
+    { filename = "002-Sky.jpg", alt = "Sky" },
+    { filename = "001-Flower.jpg", alt = "Flower" },
+]
